@@ -45,5 +45,6 @@ npm start
 ```
 This command will start the development server, and it should automatically open a new browser tab with the app running.
 If it doesn’t open automatically, you can manually open your browser and go to http://localhost:3000.
+
 Step 5: Stopping the Development Server
 When you’re done, you can stop the server by returning to the terminal where npm start was running and pressing Ctrl + C on your keyboard.
