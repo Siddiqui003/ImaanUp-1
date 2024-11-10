@@ -1,0 +1,104 @@
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .question-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .question-section {
+    width: 100%;
+  }
+  
+  .question-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .answer-section {
+    margin-bottom: 20px;
+  }
+  
+  .option-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option-button:hover {
+    background-color: #45a049;
+  }
+  
+  .option-button.selected {
+    background-color: #388e3c;
+  }
+  
+  .next-button, .submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-button:hover, .submit-button:hover {
+    background-color: #1976D2;
+  }
+  
+  .next-button:disabled, .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .score-section {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+
+  .retake-button {
+    background-color: blue;  /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family:'Times New Roman', Times, serif
+  }
+  
+  .retake-button:hover {
+    background-color: rgb(78, 78, 141);  /* Darker green */
+  }
+  
