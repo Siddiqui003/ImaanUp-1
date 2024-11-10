@@ -26,23 +26,23 @@ You’ll need to make a local copy of the project on your computer.
    ```bash
    git clone https://github.com/noman-faraz-islamic/eemaan-up
 Navigate into the project folder:
-bash
-Copy code
+```bash
 cd eemaan-up/react-basic-quiz
+```
 Step 3: Install Project Dependencies
 Once you’re in the project folder, install the necessary packages by running:
 
-bash
-Copy code
+```bash
 npm install
+```
 This command will download and set up all the required libraries.
 
 Step 4: Start the Development Server
 To see the project in action, run:
 
-bash
-Copy code
+```bash
 npm start
+```
 This command will start the development server, and it should automatically open a new browser tab with the app running.
 If it doesn’t open automatically, you can manually open your browser and go to http://localhost:3000.
 Step 5: Stopping the Development Server
