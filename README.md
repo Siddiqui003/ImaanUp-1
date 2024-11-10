@@ -27,7 +27,7 @@ You’ll need to make a local copy of the project on your computer.
    git clone https://github.com/noman-faraz-islamic/eemaan-up
 Navigate into the project folder:
 ```bash
-cd eemaan-up/react-basic-quiz
+cd react-basic-quiz
 ```
 Step 3: Install Project Dependencies
 Once you’re in the project folder, install the necessary packages by running:
