@@ -24,7 +24,7 @@ You’ll need to make a local copy of the project on your computer.
 1. Open a terminal.
 2. Run this command to clone the project:
    ```bash
-   git clone https://github.com/noman-faraz-islamic/eemaan-up
+   git clone https://github.com/noman-faraz-islamic/ImaanUp
 Navigate into the project folder:
 ```bash
 cd react-basic-quiz

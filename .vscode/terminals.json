@@ -1,0 +1,45 @@
+{
+    "autorun": false,
+    "autokill": false,
+    "terminals": [
+      {
+        "name": "Install pygitup",
+        "description": "One-time install of pygitup",
+        "commands": [
+          "pip install git-up"
+        ],
+        "open": true,
+        "focus": true,
+        "execute": true,
+        "recycle": false
+      },
+      {
+        "name": "Update local branches",
+        "description": "Update all local git branches with remote origin",
+        "commands": [
+          "git fetch -p",
+          "for /f \"tokens=*\" %b in ('git branch -r --format=\"%%(refname:short)\"') do git branch --track %b %b 2>nul",
+          "for /f \"tokens=*\" %b in ('git for-each-ref --format=\"%%(refname:short)\" refs/heads/') do git branch --set-upstream-to=origin/%b %b 2>nul",
+          "git up"
+        ],
+        "open": true,
+        "focus": true,
+        "execute": true,
+        "recycle": false
+      },
+      {
+        "name": "Run local",
+        "description": "Starts frontend local",
+        "cwd": "C:\\Users\\noman\\Documents\\ImaanUp\\",
+        "commands": [
+          "cd react-basic-quiz",
+          "npm start"
+        ],
+        "open": true,
+        "focus": true,
+        "execute": true,
+        "recycle": false
+      }
+    ]
+  }
+  

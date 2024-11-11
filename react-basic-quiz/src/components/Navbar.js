@@ -7,8 +7,8 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img src="/logo.png" alt="Eemaan Up Logo" className="logo-image" />
-                <span className="app-name">Eemaan Up</span>
+                <img src="/logo.png" alt="ImaanUp Logo" className="logo-image" />
+                <span className="app-name">ImaanUp</span>
             </div>
             <div className="nav-links">
                 <Link to="/">Home</Link>
