@@ -5,7 +5,7 @@ import './Quran.css';
 import Navbar from "../Navbar";
 
 
-const apiKey = "AIzaSyCT5475G-8owc3ZHu0ciRYGupY7rvs3rZo"; // Replace with your actual YouTube API key
+const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY // Replace with your actual YouTube API key
 
 
 // Qaari map with display name and playlist IDs
