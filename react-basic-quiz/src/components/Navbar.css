@@ -1,35 +1,50 @@
 /* src/components/Navbar.css */
+
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #4A90E2; /* Customize color as desired */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #4a148c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.logo {
+.navbar-logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-logo:hover .app-name,
+.navbar-logo:hover .logo-image {
+    opacity: 0.85;
 }
 
 .logo-image {
-    width: 40px; /* Adjust logo size */
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
+    transition: opacity 0.3s ease;
 }
 
 .app-name {
     font-size: 1.5rem;
-    color: white;
     font-weight: bold;
+    transition: opacity 0.3s ease;
 }
 
 .nav-links a {
-    color: white;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
+    color: white;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #b39ddb;
 }

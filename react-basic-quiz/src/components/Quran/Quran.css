@@ -1,0 +1,169 @@
+/* Quran.css */
+.quran-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.quran-header {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  color: #2c3e50;
+}
+
+.video-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.video-thumbnail {
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border: 2px solid burlywood;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(78, 88, 78);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.page-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-button:hover {
+  background-color: #0073e6;
+  color: #fff;
+}
+
+.page-button.active {
+  background-color: #0073e6;
+  color: #fff;
+  font-weight: bold;
+}
+
+.thumbnail-image {
+  width: 100%;
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.video-title{
+  margin: 4px;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  border: 2px solid #0073e6;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the title and dropdown */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.qari-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #0073e6;
+  border-radius: 5px;
+  margin-left: 10px; /* Optional: add space between the title and dropdown */
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.qari-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #0073e6;
+  border-radius: 5px;
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  max-height: 800px;
+  position: relative; /* Added for positioning close button outside */
+}
+
+/* Close button styles */
+.close-button {
+  position: absolute;
+  top: -15px;  /* Place the close button above the modal */
+  right: -15px; /* Position it on the right side */
+  width: 40px;  /* Set width and height to make it circular */
+  height: 40px;
+  background-color: #fff;  /* White background */
+  border-radius: 50%;  /* Make it round */
+  border: 2px solid #333; /* Optional: add a border for better visibility */
+  color: #333; /* Dark color for the 'X' */
+  font-size: 32px; /* Size of the 'X' */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;  /* Make sure it stays on top */
+}
+
+.close-button:hover {
+  background-color: #f1f1f1;  /* Light background on hover */
+  border-color: #f00;  /* Change border color on hover */
+  color: red;  /* Change 'X' color on hover */
+}

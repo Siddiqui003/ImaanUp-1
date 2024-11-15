@@ -1,0 +1,103 @@
+/* src/components/FeedbackButton.css */
+
+/* Pencil Icon Button Style */
+.feedback-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4a148c;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.feedback-button i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.feedback-button:hover {
+    background-color: #6a1b9a;
+}
+
+/* Modal Styles */
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.feedback-modal {
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    outline: none;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-modal h2 {
+    margin: 0;
+    color: #4a148c;
+    font-size: 1.5rem;
+}
+
+.feedback-modal p {
+    color: #555;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.feedback-textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background-color: #6a1b9a;
+}
