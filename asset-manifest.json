@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ImaanUp/static/css/main.6dd87335.css",
-    "main.js": "/ImaanUp/static/js/main.b845a32b.js",
+    "main.js": "/ImaanUp/static/js/main.7125748d.js",
     "static/js/453.50eeb9b3.chunk.js": "/ImaanUp/static/js/453.50eeb9b3.chunk.js",
     "static/media/fa-solid-900.ttf": "/ImaanUp/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/ImaanUp/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/ImaanUp/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/ImaanUp/index.html",
     "main.6dd87335.css.map": "/ImaanUp/static/css/main.6dd87335.css.map",
-    "main.b845a32b.js.map": "/ImaanUp/static/js/main.b845a32b.js.map",
+    "main.7125748d.js.map": "/ImaanUp/static/js/main.7125748d.js.map",
     "453.50eeb9b3.chunk.js.map": "/ImaanUp/static/js/453.50eeb9b3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6dd87335.css",
-    "static/js/main.b845a32b.js"
+    "static/js/main.7125748d.js"
   ]
 }
