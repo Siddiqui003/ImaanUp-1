@@ -1,6 +1,8 @@
+// src/components/Quiz.js
 import React, { useState, useEffect } from 'react';
 import { useTransition, animated } from '@react-spring/web';
 import './Quiz.css';
+import Navbar from '../Navbar';
 
 const questions = [
   {
@@ -29,7 +31,7 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [shouldSlide, setShouldSlide] = useState(false);  // Control sliding
+  const [shouldSlide, setShouldSlide] = useState(false);
 
   // Transitions for sliding animation
   const transitions = useTransition(currentQuestion, {
@@ -37,49 +39,51 @@ const Quiz = () => {
     enter: { transform: 'translateX(0%)', opacity: 1 },
     leave: { transform: 'translateX(-100%)', opacity: 0 },
     reset: true,
-    immediate: !shouldSlide,  // Disable transition until Next Question is clicked
+    immediate: !shouldSlide,
   });
 
   const handleOptionClick = (scoreValue) => {
-    setSelectedOption(scoreValue);  // Set selected option
+    setSelectedOption(scoreValue);
   };
 
   const handleNextQuestion = () => {
     if (selectedOption !== null) {
-      setScore(score + selectedOption);  // Add score for the selected option
-      setShouldSlide(true);  // Enable sliding animation
-      setSelectedOption(null);  // Reset selected option
+      setScore(score + selectedOption);
+      setShouldSlide(true);
+      setSelectedOption(null);
     }
   };
 
   const handleSubmit = () => {
-    setScore(score + selectedOption);  // Add final score
+    setScore(score + selectedOption);
     setIsCompleted(true);
   };
 
   const handleRetakeQuiz = () => {
-    setCurrentQuestion(0);  // Reset to first question
-    setScore(0);  // Reset score
-    setSelectedOption(null);  // Reset selected option
-    setIsCompleted(false);  // Mark quiz as not completed
-    setShouldSlide(false);  // Disable sliding effect for retake
+    setCurrentQuestion(0);
+    setScore(0);
+    setSelectedOption(null);
+    setIsCompleted(false);
+    setShouldSlide(false);
   };
-
 
   useEffect(() => {
     if (shouldSlide) {
-      // Immediately change question and then apply slide effect
       setCurrentQuestion((prev) => (prev + 1) % questions.length);
       const timer = setTimeout(() => {
-        setShouldSlide(false);  // Disable sliding after transition
-      }, 500); // Delay for content update, slide effect will follow right after
+        setShouldSlide(false);
+      }, 500);
 
       return () => clearTimeout(timer);
     }
   }, [shouldSlide]);
 
   return (
+    <div>
+    <Navbar/> 
     <div className="quiz">
+      <h1 className="quiz-heading">ImaanUp Knowledge Quiz</h1>
+
       {isCompleted ? (
         <div className="score-section">
           <p>You scored: {score} points</p>
@@ -90,24 +94,27 @@ const Quiz = () => {
       ) : (
         <div className="question-container">
           {transitions((style, item) => (
-            <animated.div style={style}>
+            <animated.div style={style} className="question-card">
               <div className="question-section">
-                <h2>{questions[item].questionText}</h2>
+                <h2 className="question-text">
+                  Question {currentQuestion + 1}: {questions[item].questionText}
+                </h2>
               </div>
               <div className="answer-section">
                 {questions[item].options.map((option, index) => (
                   <button
                     key={index}
-                    onClick={() => handleOptionClick(option.score)}  // Only sets selected option
+                    onClick={() => handleOptionClick(option.score)}
                     className={`option-button ${selectedOption === option.score ? 'selected' : ''}`}
                   >
+                    <span className="option-label">{String.fromCharCode(65 + index)}.</span> 
                     {option.answerText}
                   </button>
                 ))}
               </div>
               {currentQuestion < questions.length - 1 ? (
                 <button
-                  onClick={handleNextQuestion}  // Triggers slide on Next Question
+                  onClick={handleNextQuestion}
                   disabled={selectedOption === null}
                   className="next-button"
                 >
@@ -126,6 +133,7 @@ const Quiz = () => {
           ))}
         </div>
       )}
+    </div>
     </div>
   );
 };

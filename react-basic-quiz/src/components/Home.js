@@ -2,16 +2,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import './Home.css';
 
 const Home = () => {
     return (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <Navbar/>
-            <h1>Welcome to ImaanUp</h1>
-            <p>Test your knowledge with our quiz!</p>
-            <Link to="/quiz">
-                <button style={{ padding: '10px 20px', fontSize: '1rem' }}>Start Quiz</button>
-            </Link>
+        <div className="home-container">
+            <Navbar />
+            <div className="home-content">
+                <h1>Welcome to ImaanUp</h1>
+                <p>Test your knowledge with our quiz!</p>
+                <Link to="/quiz">
+                    <button className="start-quiz-button">Start Quiz</button>
+                </Link>
+            </div>
+            <div className="home-content">
+                <p>Listen Quran from authentic Qaaris</p>
+                <Link to="/quran-youtube">
+                    <button className="start-quiz-button">Listen Quran</button>
+                </Link>
+            </div>
         </div>
     );
 };
