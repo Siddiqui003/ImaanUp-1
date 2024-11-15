@@ -39,6 +39,18 @@
         "focus": true,
         "execute": true,
         "recycle": false
+      },
+      {
+        "name": "Deploy",
+        "description": "Deploy current branch to github",
+        "cwd": "C:\\Users\\noman\\Documents\\ImaanUp\\react-basic-quiz",
+        "commands": [
+          "npm run deploy"
+        ],
+        "open": true,
+        "focus": true,
+        "execute": true,
+        "recycle": false
       }
     ]
   }
