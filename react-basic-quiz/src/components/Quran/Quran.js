@@ -25,6 +25,10 @@ const qariMap = {
     displayName: "Saad ash-Shuraim",
     playlistId: "PLzX-2km3_XsTt50tYP0s67dA_kipr35O_",
   },
+  ayyub: {
+    displayName: "Muhammad Ayyub",
+    playlistId: "PLzX-2km3_XsTyym6nhojxNoU0cJKfPPxs",
+  },
 };
 
 const QuranComponent = () => {
